@@ -15,19 +15,34 @@ body, html {
 }
 #game-info {
   top: 40px;
+  font-variant-numeric: tabular-nums;
 }
-#info-hvr {
+#game-info > div {
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 6px;
+  align-items: center;
+  min-height: 24px;
+}
+#game-info > div > span {
+  text-align: center;
+}
+#top-actions {
   position: absolute;
-  color: white;
-  font-weight: bold;
   top: 40px;
   right: 20px;
-  width: 30px;
-  height: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(87, 87, 87, 0.246);
+  gap: 6px;
+}
+#top-actions button {
+  color: white;
+  font-weight: bold;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid #6e7c8b;
+  border-radius: 4px;
+  background: #263442;
   cursor: pointer;
 }
 #controls {

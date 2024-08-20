@@ -1,0 +1,32 @@
+{
+  "name": "webgl-maze",
+  "version": "1.0.0",
+  "description": "A 3D marble maze that you tilt to guide the ball.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iferrer20/WebGL-Maze.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iferrer20/WebGL-Maze/issues"
+  },
+  "homepage": "https://github.com/iferrer20/WebGL-Maze#readme",
+  "devDependencies": {
+    "@types/three": "0.170.0",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  },
+  "dependencies": {
+    "cannon-es": "0.20.0",
+    "gl-matrix": "3.4.3",
+    "three": "0.170.0"
+  }
+}

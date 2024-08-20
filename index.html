@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze wood</title>
-    <script src="js/lib/gl-matrix-min.js"></script>
-    <script src="js/index.js" defer></script>
+    <title>Laberinto de madera</title>
+    <script type="module" src="/src/main.ts"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <span id="render-info"></span>
-    <div id="info-hvr">?</div>
+    <div id="top-actions">
+      <button id="reset-progress" type="button">Reiniciar progreso</button>
+      <button id="info-hvr" type="button" aria-label="Controles">?</button>
+    </div>
     <div id="controls" class="hidden">
       Controles 
       <br>
-      Mover tablero: ← ↑ → (Shift para mayor presición)
+      Mover tablero: ← ↑ ↓ → (Mayús para mayor precisión)
       <br>
-      Zoom in: z
+      Acercar: Z
       <br>
-      Zoom out: x
+      Alejar: X
+      <br>
+      Restablecer zoom: R
+      <br>
+      Cámara libre: F (WASD, Q/E y movimiento del ratón)
+      <br>
+      Seguir la bola: V
+      <br>
+      En cámara libre: ← ↑ ↓ → siguen moviendo el tablero
+      <br>
+      Ratón para mirar (Esc libera el cursor)
     </div>
-    <span id="game-info">aa</span>
-    <h1 class="hidden centered" id="no-webgl">WebGL Not supported</h1>
+    <div id="game-info">
+      <div title="Nivel"><span aria-hidden="true">⚑</span><output id="level-value" aria-label="Nivel"></output></div>
+      <div title="Intentos"><span aria-hidden="true">↻</span><output id="attempts-value" aria-label="Intentos"></output></div>
+      <div title="Mejor tiempo"><span aria-hidden="true">🏆</span><output id="best-value" aria-label="Mejor tiempo"></output></div>
+      <div title="Tiempo actual"><span aria-hidden="true">⏱</span><output id="time-value" aria-label="Tiempo actual" aria-live="off"></output></div>
+    </div>
+    <h1 class="hidden centered" id="no-webgl">WebGL no está disponible</h1>
     <h1 class="hidden centered" id="no-levels">
-      The end!
+      ¡Laberinto completado!
       <br>
-      No levels left
+      No quedan más niveles
     </h1>
     <canvas id="glcanvas"></canvas>
   </body>
