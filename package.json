@@ -1,5 +1,5 @@
 {
-  "name": "webgl-maze",
+  "name": "threejs-maze",
   "version": "1.0.0",
   "description": "A 3D marble maze that you tilt to guide the ball.",
   "scripts": {
