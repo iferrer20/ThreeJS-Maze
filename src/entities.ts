@@ -32,8 +32,9 @@ class PlayerEntity {
     }
     const column = Math.floor(x + 0.5);
     const row = Math.floor(z + 0.5);
-    const tile = GameMap.maps[Game.level - 1][row]?.[column];
-    if (tile === 3 && this.physics.onFloor) {
+    const map = GameMap.maps[Game.level - 1];
+    const tile = map[row]?.[column];
+    if (this.physics.onFloor && this.touchesGoal(map, x, z)) {
       this.onWin();
       return;
     }
@@ -42,6 +43,24 @@ class PlayerEntity {
       vec3.set(this.checkpoint, column, floorTop, row);
     }
     this.physics.writeModel(this.model);
+  }
+
+  private touchesGoal(map: number[][], x: number, z: number) {
+    const minColumn = Math.max(0, Math.ceil(x - this.radius - 0.5));
+    const maxColumn = Math.min(map[0].length - 1, Math.floor(x + this.radius + 0.5));
+    const minRow = Math.max(0, Math.ceil(z - this.radius - 0.5));
+    const maxRow = Math.min(map.length - 1, Math.floor(z + this.radius + 0.5));
+    const contactDistance = this.radius + 0.02;
+
+    for (let row = minRow; row <= maxRow; row++) {
+      for (let column = minColumn; column <= maxColumn; column++) {
+        if (map[row][column] !== 3) continue;
+        const dx = Math.max(Math.abs(x - column) - 0.5, 0);
+        const dz = Math.max(Math.abs(z - row) - 0.5, 0);
+        if (dx * dx + dz * dz <= contactDistance * contactDistance) return true;
+      }
+    }
+    return false;
   }
 
   private onWin() {
