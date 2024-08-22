@@ -30,22 +30,22 @@ class PlayerEntity {
       this.onDie();
       return;
     }
-    const column = Math.floor(x + 0.5);
-    const row = Math.floor(z + 0.5);
     const map = GameMap.maps[Game.level - 1];
-    const tile = map[row]?.[column];
-    if (this.physics.onFloor && this.touchesTile(map, x, z, 3)) {
-      this.onWin();
-      return;
-    }
-    if (this.physics.onFloor && this.touchesTile(map, x, z, checkpointTile)) {
-      this.checkpoint ??= vec3.create();
-      vec3.set(this.checkpoint, column, floorTop, row);
+    if (this.physics.onFloor) {
+      if (this.findTouchedTile(map, x, z, 3)) {
+        this.onWin();
+        return;
+      }
+      const checkpoint = this.findTouchedTile(map, x, z, checkpointTile);
+      if (checkpoint) {
+        this.checkpoint ??= vec3.create();
+        vec3.set(this.checkpoint, checkpoint.column, floorTop, checkpoint.row);
+      }
     }
     this.physics.writeModel(this.model);
   }
 
-  private touchesTile(map: number[][], x: number, z: number, target: number) {
+  private findTouchedTile(map: number[][], x: number, z: number, target: number) {
     const minColumn = Math.max(0, Math.ceil(x - this.radius - 0.5));
     const maxColumn = Math.min(map[0].length - 1, Math.floor(x + this.radius + 0.5));
     const minRow = Math.max(0, Math.ceil(z - this.radius - 0.5));
@@ -57,10 +57,10 @@ class PlayerEntity {
         if (map[row][column] !== target) continue;
         const dx = Math.max(Math.abs(x - column) - 0.5, 0);
         const dz = Math.max(Math.abs(z - row) - 0.5, 0);
-        if (dx * dx + dz * dz <= contactDistance * contactDistance) return true;
+        if (dx * dx + dz * dz <= contactDistance * contactDistance) return { column, row };
       }
     }
-    return false;
+    return undefined;
   }
 
   private onWin() {
