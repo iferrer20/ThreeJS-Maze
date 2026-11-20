@@ -1,0 +1,23 @@
+package.json
+  s_072a0599340fca::t_9bcd2e176be48e 2
+index.html
+  s_072a0599340fca::t_9bcd2e176be48e 7
+package-lock.json
+  s_072a0599340fca::t_daaeaf08f68035 2,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "94aa31779974b60592ee6e020a8e4b147f2c19e4",
+  "prompts": {},
+  "sessions": {
+    "s_072a0599340fca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1f5f6-2fb2-7971-84ed-d73c271c563d",
+        "model": "gpt-6-luna"
+      },
+      "human_author": null
+    }
+  }
+}
