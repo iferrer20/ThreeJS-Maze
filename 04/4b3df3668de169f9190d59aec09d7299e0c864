@@ -1,0 +1,19 @@
+src/level-layouts.ts
+  s_072a0599340fca::t_4b673798cb03d3 168-169,171-172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "044b3df3668de169f9190d59aec09d7299e0c864",
+  "prompts": {},
+  "sessions": {
+    "s_072a0599340fca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1f5f6-2fb2-7971-84ed-d73c271c563d",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "iferrer20 <75810984+iferrer20@users.noreply.github.com>"
+    }
+  }
+}
