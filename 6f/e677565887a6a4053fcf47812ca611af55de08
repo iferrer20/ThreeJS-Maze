@@ -1,0 +1,24 @@
+src/level-layouts.ts
+  s_072a0599340fca::t_623a9fa033b585 46,57
+  s_072a0599340fca::t_f919786422584f 50-56
+src/entities.ts
+  s_072a0599340fca::t_125237a34cd0c9 35-36,49-56,58-63
+  s_072a0599340fca::t_6f9d16c4a5ef4c 64-65
+  s_072a0599340fca::t_5ed3637b3d58c6 37,41,48,57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "6fe677565887a6a4053fcf47812ca611af55de08",
+  "prompts": {},
+  "sessions": {
+    "s_072a0599340fca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1f5f6-2fb2-7971-84ed-d73c271c563d",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "iferrer20 <75810984+iferrer20@users.noreply.github.com>"
+    }
+  }
+}
