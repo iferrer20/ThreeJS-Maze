@@ -1,0 +1,25 @@
+package-lock.json
+  s_072a0599340fca::t_b502e27c22f831 29,31,37-38,46,48,622,699,731,733,758,956-957
+src/level-layouts.ts
+  s_072a0599340fca::t_623a9fa033b585 46,57
+  s_072a0599340fca::t_f919786422584f 50-56
+src/entities.ts
+  s_072a0599340fca::t_125237a34cd0c9 35-37,48-63
+  s_072a0599340fca::t_6f9d16c4a5ef4c 64-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "5ba603a7a4df309dac28c66c83e904070d5cb52a",
+  "prompts": {},
+  "sessions": {
+    "s_072a0599340fca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1f5f6-2fb2-7971-84ed-d73c271c563d",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "iferrer20 <75810984+iferrer20@users.noreply.github.com>"
+    }
+  }
+}
