@@ -1,0 +1,19 @@
+vite.config.ts
+  s_072a0599340fca::t_07b00f8c7f3323 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "edbc4ad4500bab60daefdd691ce8b6c9ba9d2d58",
+  "prompts": {},
+  "sessions": {
+    "s_072a0599340fca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1f5f6-2fb2-7971-84ed-d73c271c563d",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "iferrer20 <75810984+iferrer20@users.noreply.github.com>"
+    }
+  }
+}
