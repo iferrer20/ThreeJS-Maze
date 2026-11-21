@@ -1,0 +1,20 @@
+.github/workflows/pages.yml
+  s_072a0599340fca::t_97daef0ced40ea 16,33,35-45
+  s_072a0599340fca::t_9e5495f362cbd9 18-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "8bf4fdb3569e21c506e0e083a7083052c47331eb",
+  "prompts": {},
+  "sessions": {
+    "s_072a0599340fca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1f5f6-2fb2-7971-84ed-d73c271c563d",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "iferrer20 <75810984+iferrer20@users.noreply.github.com>"
+    }
+  }
+}
